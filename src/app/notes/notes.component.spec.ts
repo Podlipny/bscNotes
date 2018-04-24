@@ -25,23 +25,4 @@ describe('NotesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should render title in a h1 tag', async(() => {
-    fixture = TestBed.createComponent(NotesComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1')).toBeTruthy();
-  }));
-
-  it('should click on EN and change language', async(() => {
-    fixture = TestBed.createComponent(NotesComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    // najdeme En button a overime ze obsahuje En label
-    const button = compiled.querySelector('div > div.row.vertical-center > div.col > button:nth-child(2)');
-    expect(button.textContent).toContain('EN');
-    button.click();
-
-    expect(compiled.querySelector('button')).toBeTruthy();
-  }));
 });

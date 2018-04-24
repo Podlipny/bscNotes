@@ -7,9 +7,13 @@ import { ResourceService } from './core/resource.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private resources: ResourceService) {
+  constructor(public resources: ResourceService) {
     if (this.resources.dict == null) {
       this.resources.loadLanguageResource('cz');
     }
+  }
+
+  changeLanguage(language: string) {
+    this.resources.loadLanguageResource(language);
   }
 }

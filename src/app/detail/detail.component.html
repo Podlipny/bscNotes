@@ -1,3 +1,26 @@
-<p>
-  detail works!
-</p>
+
+<form [formGroup]="detailForm" id="detailForm" (ngSubmit)="editNote(detailForm.value)">
+  <div class="form-group">
+    <div class="form-group">  
+      <label for="exampleInputPassword1">{{ resources.dict?.noteIdLabel }}</label>
+      <input type="text"
+             name="id" 
+             [formControl]="idFormControl" 
+             class="form-control" 
+             readonly >
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">{{ resources.dict?.noteTitleLabel }}</label>
+      <input type="text"
+              [formControl]="titleFormControl" 
+              name="title" 
+              class="form-control" 
+              placeholder='{{ resources.dict?.noteTitleLabel }}' required >
+    </div>
+    <div class="btn-group" role="group">
+      <button type="buttn" class="btn btn-secondary" (click)="back()">{{ resources.dict?.goBack }}</button>
+      <button type="submit" *ngIf="!isReadMode" form="detailForm" class="btn btn-primary" [disabled]="!detailForm.valid">{{ resources.dict?.addNoteLabel }}</button>
+    </div>
+  </div>
+</form>

@@ -37,8 +37,13 @@ export class NotesService {
     return this.http.post<INote>(environment.apiUrl + this.endpoint, note, { headers: this.headers });
   }
 
-  getNote(note: INote): Observable<INote> {
-    return this.http.get<INote>(environment.apiUrl + this.endpoint + '/' + note.id, { headers: this.headers });
+  editNote(note: INote): Observable<INote> {
+    return this.http.put<INote>(environment.apiUrl + this.endpoint + '/' + note.id, note, { headers: this.headers });
+  }
+
+  getNote(id: number): Observable<INote> {
+    // for some reason mock API still returns ID 2 - but it's enough for example
+    return this.http.get<INote>(environment.apiUrl + this.endpoint + '/' + id, { headers: this.headers });
   }
 
   deleteNote(note: INote): Observable<INote> {

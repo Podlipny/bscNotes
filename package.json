@@ -5,7 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "debug": "ng serve -o -lr"
+    "debug": "ng serve -o -lr",
+    "install": "ng build --prod",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

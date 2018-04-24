@@ -23,10 +23,6 @@ export class NotesComponent implements OnInit {
     }
   }
 
-  changeLanguage(language: string) {
-    this.resources.loadLanguageResource(language);
-  }
-
   delete(note: INote) {
     this.busy.show();
     if (this.notesService.noteExist(note)) {

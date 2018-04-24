@@ -2,5 +2,8 @@
   "title": "Poznamky",
   "addNoteLabel": "Ulozit",
   "addNotePlaceHolder": "Nova poznamka!",
-  "emptyList": "Nemate zadne poznamky."
+  "emptyList": "Nemate zadne poznamky.",
+  "goBack": "Zpet",
+  "noteIdLabel": "Identifikator",
+  "noteTitleLabel": "Titulek"
 }

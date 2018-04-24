@@ -3,4 +3,7 @@ export interface IResource {
   addNoteLabel: string;
   addNotePlaceHolder: string;
   emptyList: string;
+  goBack: string;
+  noteIdLabel: string;
+  noteTitleLabel: string;
 }

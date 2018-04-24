@@ -2,5 +2,8 @@
   "title": "Notes",
   "addNoteLabel": "Save",
   "addNotePlaceHolder": "New note!",
-  "emptyList": "You don't have any notes."
+  "emptyList": "You don't have any notes.",
+  "goBack": "Back",
+  "noteIdLabel": "Identificator",
+  "noteTitleLabel": "Title"
 }

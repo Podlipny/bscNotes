@@ -1,4 +1,15 @@
-<div class="router-outlet">
+<div class="container">
+  <div class="row vertical-center">
+    <div class="col-6">
+      <h1>
+        {{ resources.dict?.title }}
+      </h1>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-light" (click)="changeLanguage('cz')">CZ</button>
+      <button type="button" class="btn btn-light" (click)="changeLanguage('en')">EN</button>
+    </div>
+  </div>
   <router-outlet></router-outlet>
-  <app-busy></app-busy>
 </div>
+<app-busy></app-busy>

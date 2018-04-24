@@ -10,8 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   { path: '', component: NotesComponent },
-  { path: 'detail', component: DetailComponent },
-  { path: 'edit', component: DetailComponent },
+  { path: ':operation/:id', component: DetailComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
 
