@@ -9,6 +9,7 @@
       "outDir": "install",
       "assets": [
         "assets",
+        "resources",
         "favicon.ico"
       ],
       "index": "index.html",

@@ -1,0 +1,8 @@
+<form [formGroup]="inlineAddForm" id="inlineAddForm" (ngSubmit)="add(inlineAddForm.value)">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder='{{ resources.dict?.addNotePlaceHolder }}' aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button type="submit" form="inlineAddForm" class="btn btn-primary" [disabled]="!inlineAddForm.valid">{{ resources.dict?.addNoteLabel }}</button>
+    </div>
+  </div>
+</form>

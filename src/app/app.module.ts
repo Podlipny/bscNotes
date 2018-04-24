@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NotesComponent } from './notes/notes.component';
+import { InlineaddComponent } from './inlineadd/inlineadd.component';
 
 const routes: Routes = [
   { path: '', component: NotesComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent
+    NotesComponent,
+    InlineaddComponent
   ],
   imports: [
     BrowserModule,

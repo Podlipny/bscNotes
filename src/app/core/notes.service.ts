@@ -21,10 +21,11 @@ export class NotesService {
   }
 
   loadAll() {
-    this.http.get<INote[]>(environment.apiUrl + this.endpoint + '/')
+    this.http.get<INote[]>(environment.apiUrl + this.endpoint)
              .subscribe((data: INote[]) => {
               // we are loading data from mock, so if we will delete record with Id 1 or 2 it will get loaded again
               this.notes = data;
+              console.log(data);
              }, err => console.log(err));
   }
 
@@ -36,5 +37,9 @@ export class NotesService {
                console.log('Error occured please try it again!');
                console.log(err);
             });
+  }
+
+  getMaxId(): number {
+    return Math.max.apply(this.notes.map(function(note) { return note.id; }));
   }
 }
