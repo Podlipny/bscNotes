@@ -7,19 +7,29 @@
       </h1>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-light" (click)="changeLanguage('cz')" >CZ</button>
+      <button type="button" class="btn btn-light" (click)="changeLanguage('cz')">CZ</button>
       <button type="button" class="btn btn-light" (click)="changeLanguage('en')">EN</button>
     </div>
   </div>
 
   <!-- quick inline add -->
   <app-inlineadd (addEvent)="addNote($event)"></app-inlineadd>
-
   <!-- note items -->
   <div class="row">
-    <ul class="list-group notes">
-      <li *ngFor="let note of notesService.notes" class="list-group-item">{{ note.title }}</li>
+    <ul class="list-group notes" *ngIf="notesService.notes.length !== 0">
+      <li *ngFor="let note of notesService.notes" class="list-group-item vertical-center">
+        {{ note.title }}
+        <span>
+          <button type="button" class="btn btn-secondary" (click)="edit(note)">
+            <span class="fas fa-edit"></span>
+          </button>
+          <button type="button" class="btn btn-danger" (click)="delete(note)">
+            <span class="fas fa-trash"></span>
+          </button>
+        </span>
+      </li>
     </ul>
+    <p *ngIf="notesService.notes.length === 0">{{ resources.dict?.emptyList }}</p>
   </div>
   
 </div>

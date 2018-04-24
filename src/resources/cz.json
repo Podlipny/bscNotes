@@ -1,5 +1,6 @@
 {
   "title": "Poznamky",
   "addNoteLabel": "Ulozit",
-  "addNotePlaceHolder": "Nova poznamka!"
+  "addNotePlaceHolder": "Nova poznamka!",
+  "emptyList": "Nemate zadne poznamky."
 }

@@ -1,5 +1,6 @@
 {
   "title": "Notes",
   "addNoteLabel": "Save",
-  "addNotePlaceHolder": "New note!"
+  "addNotePlaceHolder": "New note!",
+  "emptyList": "You don't have any notes."
 }

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InlineaddComponent } from './inlineadd.component';
+import { FormsModule } from '@angular/forms';
+import { CoreModule } from '../core/core.module';
 
 describe('InlineaddComponent', () => {
   let component: InlineaddComponent;
@@ -8,6 +10,7 @@ describe('InlineaddComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [CoreModule],
       declarations: [ InlineaddComponent ]
     })
     .compileComponents();

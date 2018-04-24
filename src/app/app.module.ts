@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NotesComponent } from './notes/notes.component';
 import { InlineaddComponent } from './inlineadd/inlineadd.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   { path: '', component: NotesComponent },
+  { path: 'detail', component: DetailComponent },
+  { path: 'edit', component: DetailComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
 
@@ -16,7 +19,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NotesComponent,
-    InlineaddComponent
+    InlineaddComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
